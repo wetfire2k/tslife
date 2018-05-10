@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="bundle.js"></script>
+    <style>
+     #ca {
+         width: 500px;
+         height: 500px;
+     }
+    </style>
+</head>
+<body>
+    <canvas id="ca" width="150" height="150"></canvas>
+    <button class="js-stop-button">Stop</button>
+    <button class="js-start-button">Start</button>
+    <button class="js-step-button">Step</button>
+    <script>            
+        $(function(){
+            let world = CellularAutomata.Conway("ca", 50,50);
+            
+                    $(".js-start-button").on('click', function(){ 
+                        console.info("play");
+                        world.play();
+                    });
+                    $(".js-stop-button").on('click',  function(){ 
+                        console.info("stop");
+                        world.stop();
+                    });
+                    $(".js-step-button").on('click',  function(){ 
+                        console.info("step");
+                        world.step();
+                    });
+        });
+    </script>
+</body>
+</html>
