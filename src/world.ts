@@ -1,7 +1,7 @@
 import { ICell } from './icell';
 
 
-export class World<U, T extends ICell<U>> {
+export class World<U, T extends ICell<U> > {
 
     private _layer: number = 0;
     private _space: T[][][] = [[], []];

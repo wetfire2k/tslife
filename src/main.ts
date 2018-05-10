@@ -27,7 +27,7 @@ class ConwayLifeGame extends Player {
                 this._world.setCell(x, y, 0);
             }
         }
-        
+        ///Glider
         this._world.setCell(20, 21, 1);
         this._world.setCell(21, 21, 1);
         this._world.setCell(22, 21, 1);
